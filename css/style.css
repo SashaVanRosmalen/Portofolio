@@ -1,0 +1,157 @@
+/* General */
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+    --background-color: #ffff;
+    --surface: #d5caf5;
+    --muted-grey: #4a4a4b;
+    --silver: #D8D2E0;
+    --dusty-purple: #54456c;
+    --deep-violet: #352944;
+    --theme-button: #576264;
+}
+
+.dark-mode {
+    --background-color: #191820;
+    --surface: #292631;
+    --muted-grey: #817A8C;
+    --silver: #887a98;
+    --dusty-purple: #9C7BCE;
+    --deep-violet: #72529D;
+    --theme-button: #919191;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background-color);
+}
+
+h1,a {
+    font-family: "DM Mono", monospace;
+    font-weight: 500;
+    font-style: normal;
+}
+
+p {
+    font-family: "Sora", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 154;
+    font-style: normal;
+}
+
+h3,a {
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+hr {
+    display: block;
+    height: 4px;
+    border: 0;
+    border-top: 1px solid var(--dusty-purple);
+}
+/* End general */
+
+
+
+/* Containers */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    max-width: 1500px;
+}
+
+.large-container {
+    width: 100%;
+    height: auto;
+    background-color: var(--silver);
+}
+/* End containers */
+
+#theme-switcher {
+    width: 50px;
+    height: 50px;
+    padding: 0px;
+    border-radius: 50%;
+    background-color: var(--theme-button);
+    position: fixed;
+    right: 0;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    
+}
+#theme-switcher :last-child{
+    display: none;
+}
+
+.dark-mode #theme-switcher :first-child {
+    display: none;
+}
+
+.dark-mode #theme-switcher :last-child {
+    display: block;
+}
+
+
+
+/* Id elements */
+
+
+/* End of id elements */
+
+/* Nagivation */
+.navigation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    color: var(--muted-grey);
+    padding: 20px;
+    gap: 16px;
+    
+    a{
+        cursor: default;
+        transition: 0.3s ease;
+        color: var(--muted-grey);
+        text-decoration: none;
+        &:hover{
+            color: var(--dusty-purple);
+            transform: scale(1.1);
+            cursor: pointer;
+
+            &:active{
+                color: var(--deep-violet);
+            }
+        }
+    }
+
+    span{
+        color: var(--deep-violet);
+        font-family: "DM mono", sans-serif;
+        font-size: 1.3rem;
+    }
+
+    div{
+        display: flex;
+        gap: 12px;
+    }
+
+    img{
+        width: 60px;
+        height: auto;
+    }
+
+}
+/* End of navigation */
