@@ -77,14 +77,16 @@ hr {
 }
 /* End containers */
 
+
+
+/* Id elements */
+
 #theme-switcher {
-    width: 50px;
-    height: 50px;
+    width: 40px;
+    height: 40px;
     padding: 0px;
     border-radius: 50%;
     background-color: var(--theme-button);
-    position: fixed;
-    right: 0;
     border: none;
     display: flex;
     justify-content: center;
@@ -92,6 +94,7 @@ hr {
 
     
 }
+
 #theme-switcher :last-child{
     display: none;
 }
@@ -103,11 +106,6 @@ hr {
 .dark-mode #theme-switcher :last-child {
     display: block;
 }
-
-
-
-/* Id elements */
-
 
 /* End of id elements */
 
